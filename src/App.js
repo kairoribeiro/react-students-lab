@@ -1,14 +1,17 @@
 import './App.css';
 import { useState } from 'react';
 import { studentList } from "./data"
-import StudentList from './Student';
+import Student from './Student';
 
 function App() {
-  const [users, setUsers] = useState(studentList)
   return (
-    <div >
-      <StudentList students={users} />
-    </div>
+    <>
+    {studentList.map((user, idx) =>
+      <Student key={idx} student={user} />
+    )}
+    </>
+
+
   );
 }
 

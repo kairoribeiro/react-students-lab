@@ -1,16 +1,9 @@
+import { studentList } from "./data";
 const Score = (props) => {
     return (
         <>
-         {props.scores.map(user => 
-        <>
-         <h1>date: {props.scores.date}</h1>
-         <h1>score: {props.scores.score}</h1>
+        <h1>date: {props.score.date}  / score: {props.score.score}</h1>
         </>
-         )} 
-
-       
-        </>
-
     )
 
 }

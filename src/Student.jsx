@@ -1,22 +1,20 @@
 import Score from "./Score";
 
-const StudentList = (props) => {
+const Student = (props) => {
     return (
         <>
-        <h1>Student List</h1>
-        {props.students.map(user =>
+        <h1>Student</h1>
         <>
-            <h2>{user.name}</h2>
-            <h2>{user.bio}</h2>
-            <Score key={user.id} scores={user.scores}/>
-            </>
-
+            <h2>{props.student.name}</h2>
+            <h2>{props.student.bio}</h2>
+        {props.student.scores.map((score, idx) => 
+            <Score key={idx} score={score}/>
         )}
-
+            </>
         </>
 
     )
 
 }
 
-export default StudentList;
+export default Student;
